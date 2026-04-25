@@ -9,7 +9,6 @@
 | `be/` | Toàn bộ mã nguồn: Spring Boot 3, MVC (`@Controller` trong `com.app.web`), JSP, static assets, JPA |
 | `be/target/` | **Output Maven** (`.jar`, bản copy `schema.sql` / `application.yml` vào `classes/`) — không chỉnh tay; `mvn clean` để xóa |
 | `docs/` | Kiến trúc, ERD, `chạy.md`, `sql.md`, triển khai, runbook (tất cả dưới `docs/`) |
-| `package.json` (gốc) | Script tiện gọi Maven (`npm run be:run`, `npm run build`, …) — không có app Node/`fe/` |
 
 **Lưu ý:** Không còn frontend Next.js/Prisma trong repo; mọi truy cập DB đi qua `be/`.
 
@@ -48,8 +47,6 @@ $env:SPRING_PROFILES_ACTIVE = 'local'   # nếu dùng application-local.yml
 mvn spring-boot:run
 ```
 
-*(Tùy chọn từ thư mục gốc repo: `npm run be:run` — gọi Maven tương đương.)*
-
 4. Mở **http://localhost:8080** (cổng mặc định `server.port`).
 
 Schema + seed mẫu: `be/src/main/resources/schema.sql`, `data.sql` (chạy khi `spring.sql.init.mode` bật — xem `application.yml`).
@@ -79,14 +76,11 @@ mvn -q test          # hiện có thể chạy 0 test nếu chưa thêm lại `s
 mvn -q -DskipTests compile
 ```
 
-Hoặc từ gốc repo: `npm test` / `npm run build`.
-
 ## Tài liệu (index)
 
 | Tài liệu | Mục đích |
 |----------|----------|
 | **`docs/chạy.md`** | Chạy local: MySQL, profile `local`, `schema.sql` / `data.sql` |
-| **`AGENTS.md`** (gốc repo) | Ghi chú cho contributor (stack, bảo trì) |
 | **`docs/sql.md`** | Slide + giải thích môn DB: **JOIN**, **EXISTS**, **GROUP BY**; tham chiếu `BookingRepository` / `QueryDemoRestController` |
 | `docs/he-thong-fe-be-db-flow.md` | Luồng Web → Spring → DB |
 | `docs/luong-ket-noi-fe-be-db-chi-tiet.md` | Kết nối chi tiết, API + WebSocket + CSRF |
@@ -95,4 +89,3 @@ Hoặc từ gốc repo: `npm test` / `npm run build`.
 | `docs/deployment-guide.md` | JAR, biến môi trường, MySQL |
 | `docs/incident-runbook.md` | Runbook sự cố |
 | `docs/principles-of-database-management-project-report.md` | Báo cáo / đề cương môn PDM |
-| `package.json` (gốc) | Script `npm run be:run`, `build`, … (wrap Maven) |

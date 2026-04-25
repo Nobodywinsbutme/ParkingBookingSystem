@@ -157,8 +157,6 @@
 | Version control | Git *(GitHub — điền URL repo nếu cần)* |
 | Gợi ý thiết kế | ERD (DBML trong `docs/erd-smart-parking.md`), UML tùy môn học |
 
-Shortcut từ gốc repo (nếu có `package.json`): `npm run be:run`, `npm run build`.
-
 ---
 
 ## 4. Current Progress (Tiến độ hiện tại — theo repo)

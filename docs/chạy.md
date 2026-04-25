@@ -82,8 +82,6 @@ Chạy app:
 mvn spring-boot:run
 ```
 
-*(Hoặc từ thư mục gốc repo: `npm run be:run` — cùng lệnh Maven qua `package.json`.)*
-
 ### Điều gì xảy ra lúc khởi động
 
 1. Spring kết nối JDBC tới `smart_parking`.
