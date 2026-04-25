@@ -2,25 +2,12 @@
   "name": "smart-parking",
   "version": "0.1.0",
   "private": true,
+  "description": "Spring Boot monolith in be/ (JSP + MySQL). Run locally: see docs/chạy.md; use Maven below.",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.2.2",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.2",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "build": "mvn -f be/pom.xml package",
+    "test": "mvn -f be/pom.xml test",
+    "be:compile": "mvn -f be/pom.xml compile",
+    "be:run": "mvn -f be/pom.xml spring-boot:run",
+    "be:clean": "mvn -f be/pom.xml clean"
   }
 }

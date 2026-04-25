@@ -1,0 +1,16 @@
+# Copy this file to application-local.yml (same folder) and set your real MySQL password.
+# application-local.yml is gitignored — do not commit secrets.
+#
+# PowerShell: $env:SPRING_PROFILES_ACTIVE='local'; mvn spring-boot:run
+#
+spring:
+  datasource:
+    username: root
+    password: YOUR_MYSQL_PASSWORD_HERE
+
+# Optional: Stripe + public URL (can also use env vars STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, APP_PUBLIC_BASE_URL)
+# app:
+#   public-base-url: http://localhost:8080
+#   stripe:
+#     secret-key: sk_test_...
+#     webhook-secret: whsec_...
